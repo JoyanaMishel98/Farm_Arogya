@@ -33,13 +33,18 @@
       </div>
 
       <!-- Disease Detection -->
+       
       <div class="option" @mouseenter="handleDiseaseHover" @click="$emit('select', 'disease')">
         <img :src="currentDiseaseImg" alt="Disease Detection" />
         <p>Disease Detection</p>
       </div>
     </div>
-  </div>
-</template>
+  </div> 
+
+</template> 
+
+
+
 
 <script setup>
 import { ref, onMounted } from 'vue'
@@ -97,28 +102,31 @@ const handleDiseaseHover = () => {
 
 // Background image logic
 const defaultBg =
-  'https://images.unsplash.com/photo-1752563174621-9a295d6e8480?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  '/images/main.jpg'
 const currentBg = ref(defaultBg)
 
 const bgMap = {
   market: [
-    'https://plus.unsplash.com/premium_photo-1685946109447-abde50b6d0da?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0',
-    'https://plus.unsplash.com/premium_photo-1686360126436-7d5f05e3bf35?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0',
-    'https://plus.unsplash.com/premium_photo-1726714812701-aa8439c27a13?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0',
-    'https://plus.unsplash.com/premium_photo-1742244035023-4cf8b0af379b?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0',
+    '/images/Market/1.jpg',
+    '/images/Market/2.jpg',
+    '/images/Market/3.jpg',
+    '/images/Market/4.jpg'
+
   ],
   guide: [
-    'https://plus.unsplash.com/premium_photo-1663054893790-78f448a2b5f9?q=80&w=1235&auto=format&fit=crop&ixlib=rb-4.1.0',
-    'https://plus.unsplash.com/premium_photo-1681909647499-603f9a685cf4?q=80&w=859&auto=format&fit=crop&ixlib=rb-4.1.0',
-    'https://plus.unsplash.com/premium_photo-1663089716110-e14df5341cf9?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0',
-    'https://plus.unsplash.com/premium_photo-1681910973954-b783e53f567f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0',
-    'https://plus.unsplash.com/premium_photo-1681910968966-2e11b92ecf7c?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0',
+
+   '/images/Guide/1.jpg',
+    '/images/Guide/2.jpg',
+    '/images/Guide/3.jpg',
+    '/images/Guide/4.jpg',
+    '/images/Guide/5.jpg'
+
   ],
   disease: [
-    'https://images.unsplash.com/photo-1550055228-8490210c080d?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0',
-    'https://plus.unsplash.com/premium_photo-1695219820260-8bd4b3788a94?q=80&w=386&auto=format&fit=crop&ixlib=rb-4.1.0',
-    'https://plus.unsplash.com/premium_photo-1724129050458-5f97298bdd72?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0',
-    'https://plus.unsplash.com/premium_photo-1695638123404-146a949c6dc3?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0',
+ '/images/Disease/1.jpg',
+  '/images/Disease/2.jpg',
+  '/images/Disease/3.jpg',
+  '/images/Disease/4.jpg'
   ],
 }
 
@@ -143,6 +151,7 @@ onMounted(() => {
     farmarogyaClass.value = 'farmarogya firefox'
   }
 })
+
 </script>
 
 <style scoped>
